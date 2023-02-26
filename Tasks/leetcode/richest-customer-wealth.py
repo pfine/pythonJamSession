@@ -50,7 +50,7 @@ class Solution:
                 theWealthestOne = currentAccoutSum
         return theWealthestOne
 
-# Best from Top RunTime: 
+# Best from revieed for me:
 class SolutionRunTime1:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         return max([sum(i) for i in accounts])
@@ -59,13 +59,15 @@ class SolutionRunTime2:
     def maximumWealth(self, accounts):
         return max(map(sum, accounts))
 
-    def _maximumWealth(self, accounts: List[List[int]]) -> int:
+# Other best from Top RunTime: 
+class SolutionRunTime3:
+    def maximumWealth(self, accounts: List[List[int]]) -> int:
         return max(
             sum(account)
             for account in accounts
         )
 
-class SolutionRunTime3:
+class SolutionRunTime4:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         result = 0
         for customers in accounts:
@@ -78,7 +80,3 @@ class SolutionRunTime3:
 class SolutionMem1:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         return max([sum(x) for x in accounts])
-
-class SolutionMem2:
-    def maximumWealth(self, accounts: List[List[int]]) -> int:
-        return max([sum(account) for account in accounts])
