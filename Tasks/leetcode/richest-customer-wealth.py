@@ -55,6 +55,7 @@ class SolutionRunTime1:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         return max([sum(i) for i in accounts])
 
+
 class SolutionRunTime2:
     def maximumWealth(self, accounts):
         return max(map(sum, accounts))
