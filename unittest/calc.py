@@ -17,5 +17,5 @@ def multiply(x, y):
 def divide(x, y):
     """Divide / function"""
     if y == 0:
-        raise ('Can not divide by zerp (0) !!!')
+        raise ValueError('Can not divide by zerp (0) !!!')
     return x / y

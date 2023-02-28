@@ -28,9 +28,13 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(calc.divide(-1, -1), 1)
         self.assertEqual(calc.divide(10, 5), 2)
         self.assertEqual(calc.divide(5, 2), 2.5)
-        self.assertEqual(calc.divide(10, 0), 2)
 
-        self.assertRaises(calc.divide(10, 0), 2)
+        # old way:
+        self.assertRaises(ValueError, calc.divide, 10, 0)
+
+        # or with context manager:
+        with self.assertRaises(ValueError):
+            calc.divide(10, 0)
 
 
 if __name__ == '__main__':
