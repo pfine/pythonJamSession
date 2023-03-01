@@ -16,5 +16,5 @@ class Calculations:
 
     def get_quotient(self):
         if self.b == 0:
-            raise ('Can not divide by zerp (0) !!!')
+            raise ('Can not divide by zero (0) !!!')
         return self.a / self.b

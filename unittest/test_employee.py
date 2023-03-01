@@ -10,13 +10,13 @@ class TeatEmployee(unittest.TestCase):
 
     def test_email(self):
         """
-        Purpose: testing changes of property emaill
+        Purpose: testing changes of property email
         """
         emp_1 = Employee('Suzan', 'Vega', 200000)
-        emp_2 = Employee('Tom', 'Clency', 1000000)
+        emp_2 = Employee('Tom', 'Clancy', 1000000)
 
         self.assertEqual(emp_1.email, 'Suzan.Vega@email.com')
-        self.assertEqual(emp_2.email, 'Tom.Clency@email.com')
+        self.assertEqual(emp_2.email, 'Tom.Clancy@email.com')
 
         emp_1.first = 'Thomas'
         emp_2.last = 'Johns'
@@ -29,10 +29,10 @@ class TeatEmployee(unittest.TestCase):
         Purpose: testing changes of property fullname
         """
         emp_1 = Employee('Suzan', 'Vega', 200000)
-        emp_2 = Employee('Tom', 'Clency', 1000000)
+        emp_2 = Employee('Tom', 'Clancy', 1000000)
 
         self.assertEqual(emp_1.fullname, 'Suzan Vega')
-        self.assertEqual(emp_2.fullname, 'Tom Clency')
+        self.assertEqual(emp_2.fullname, 'Tom Clancy')
 
         emp_1.first = 'Thomas'
         emp_2.last = 'Johns'
@@ -45,7 +45,7 @@ class TeatEmployee(unittest.TestCase):
         Purpose: testing changes of property fullname
         """
         emp_1 = Employee('Suzan', 'Vega', 200000)
-        emp_2 = Employee('Tom', 'Clency', 1000000)
+        emp_2 = Employee('Tom', 'Clancy', 1000000)
 
         emp_1.apply_raise()
         emp_2.apply_raise()

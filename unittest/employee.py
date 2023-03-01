@@ -1,5 +1,7 @@
+import requests
+
 class Employee:
-    """A sample Employee class - crewate employee instance"""
+    """A sample Employee class - create employee instance"""
 
     raise_mmt = 1.05  # 5%
 
@@ -21,3 +23,14 @@ class Employee:
 
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_mmt)
+
+    # add simple mocking response from server for OK and failure
+    def monthly_schedule(self, month):
+        """
+        Purpose: Add mocking for response from server
+        """
+        response = requests.get(f'https://company.com/{self.last}/{month}') # we will mocking the response from the server
+        if response.ok:
+            return response.text
+        else:
+            return 'Bad Response!'

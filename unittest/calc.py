@@ -6,16 +6,16 @@ def add(x, y):
     """Add + function"""
     return x + y
 
-def substract(x, y):
-    """Substract - function"""
+def subtract(x, y):
+    """Subtract - function"""
     return x - y
 
 def multiply(x, y):
-    """Multiplay * function"""
+    """Multiply * function"""
     return x * y
 
 def divide(x, y):
     """Divide / function"""
     if y == 0:
-        raise ValueError('Can not divide by zerp (0) !!!')
+        raise ValueError('Can not divide by zero (0) !!!')
     return x / y
